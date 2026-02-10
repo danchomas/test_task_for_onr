@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .sel {
+            background: #007bff;
+            color: white;
+        }
+
+        .modal {
+            position: fixed;
+            top: 10%;
+            left: 30%;
+            background: white;
+            padding: 20px;
+            border: 1px solid #000;
+            box-shadow: 5px 5px 15px #888;
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body id="app">
+    <h3>учет сотрудников</h3>
+    <button @click="form={}; show=1">добавить</button>
+    <button @click="confirm('удалить?') && del()" :disabled="!selId">удалить</button>
+    <table border="1" style="width:100%; margin-top:10px; cursor:pointer">
+        <tr v-for="e in list" :class="{sel: selId==e.id}" @click="selId=e.id" @dblclick="edit(e.id)">
+            <td>{{e.id}}</td>
+            <td>{{e.employee_name}}</td>
+            <td>{{e.employee_salary}}</td>
+            <td>{{e.employee_age}}</td>
+        </tr>
+    </table>
+    <div v-if="show" class="modal">
+        <input v-model="form.employee_name" placeholder="фио"><br>
+        <input v-model="form.employee_salary" placeholder="з п" type="number"><br>
+        <input v-model="form.employee_age" placeholder="возраст" type="number"><br>
+        <button @click="save">сохранить</button><button @click="show=0">отмена</button>
+    </div>
+    <script>
+        Vue.createApp({
+            data: () => ({ list: [], selId: null, show: 0, form: {} }),
+            methods: {
+                async load() {
+                    const res = await fetch('/api/employees');
+                    const d = await res.json();
+                    this.list = d.data || [];
+                },
+                async edit(id) {
+                    const res = await fetch(`/api/employee/${id}`);
+                    const d = await res.json();
+                    this.form = d.data; this.show = 1;
+                },
+                async del() {
+                    await fetch(`/api/delete/${this.selId}`, { method: 'DELETE' });
+                    this.selId = null; this.load();
+                },
+                async save() {
+                    const id = this.form.id;
+                    await fetch(id ? `/api/update/${id}` : '/api/create', {
+                        method: id ? 'PUT' : 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(this.form)
+                    });
+                    this.show = 0; this.load();
+                }
+            },
+            mounted() { this.load() }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>

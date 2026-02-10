@@ -1,0 +1,182 @@
+[
+    {
+        "name": "Apple",
+        "category": "Fruits",
+        "price": 1.5,
+        "weight": 0.2
+    },
+    {
+        "name": "Banana",
+        "category": "Fruits",
+        "price": 1.2,
+        "weight": 0.15
+    },
+    {
+        "name": "Orange",
+        "category": "Fruits",
+        "price": 1.8,
+        "weight": 0.25
+    },
+    {
+        "name": "Milk",
+        "category": "Dairy",
+        "price": 2.5,
+        "weight": 1.0
+    },
+    {
+        "name": "Cheese",
+        "category": "Dairy",
+        "price": 5.0,
+        "weight": 0.5
+    },
+    {
+        "name": "Yogurt",
+        "category": "Dairy",
+        "price": 1.0,
+        "weight": 0.15
+    },
+    {
+        "name": "Bread",
+        "category": "Bakery",
+        "price": 1.2,
+        "weight": 0.5
+    },
+    {
+        "name": "Croissant",
+        "category": "Bakery",
+        "price": 2.0,
+        "weight": 0.1
+    },
+    {
+        "name": "Chicken Breast",
+        "category": "Meat",
+        "price": 7.5,
+        "weight": 1.0
+    },
+    {
+        "name": "Beef Steak",
+        "category": "Meat",
+        "price": 15.0,
+        "weight": 0.5
+    },
+    {
+        "name": "Pork Chop",
+        "category": "Meat",
+        "price": 8.0,
+        "weight": 0.4
+    },
+    {
+        "name": "Salmon",
+        "category": "Fish",
+        "price": 12.0,
+        "weight": 0.3
+    },
+    {
+        "name": "Tuna",
+        "category": "Fish",
+        "price": 3.0,
+        "weight": 0.2
+    },
+    {
+        "name": "Rice",
+        "category": "Grains",
+        "price": 2.2,
+        "weight": 1.0
+    },
+    {
+        "name": "Pasta",
+        "category": "Grains",
+        "price": 1.5,
+        "weight": 0.5
+    },
+    {
+        "name": "Potato",
+        "category": "Vegetables",
+        "price": 0.8,
+        "weight": 1.0
+    },
+    {
+        "name": "Tomato",
+        "category": "Vegetables",
+        "price": 2.0,
+        "weight": 0.5
+    },
+    {
+        "name": "Cucumber",
+        "category": "Vegetables",
+        "price": 1.5,
+        "weight": 0.4
+    },
+    {
+        "name": "Carrot",
+        "category": "Vegetables",
+        "price": 1.0,
+        "weight": 1.0
+    },
+    {
+        "name": "Onion",
+        "category": "Vegetables",
+        "price": 0.9,
+        "weight": 1.0
+    },
+    {
+        "name": "Chocolate",
+        "category": "Sweets",
+        "price": 3.5,
+        "weight": 0.1
+    },
+    {
+        "name": "Candy",
+        "category": "Sweets",
+        "price": 0.5,
+        "weight": 0.05
+    },
+    {
+        "name": "Cookie",
+        "category": "Sweets",
+        "price": 2.5,
+        "weight": 0.3
+    },
+    {
+        "name": "Water",
+        "category": "Drinks",
+        "price": 0.5,
+        "weight": 1.5
+    },
+    {
+        "name": "Juice",
+        "category": "Drinks",
+        "price": 3.0,
+        "weight": 1.0
+    },
+    {
+        "name": "Soda",
+        "category": "Drinks",
+        "price": 1.5,
+        "weight": 0.5
+    },
+    {
+        "name": "Coffee",
+        "category": "Drinks",
+        "price": 10.0,
+        "weight": 0.25
+    },
+    {
+        "name": "Tea",
+        "category": "Drinks",
+        "price": 5.0,
+        "weight": 0.1
+    },
+    {
+        "name": "Soap",
+        "category": "Hygiene",
+        "price": 1.5,
+        "weight": 0.1
+    },
+    {
+        "name": "Shampoo",
+        "category": "Hygiene",
+        "price": 4.5,
+        "weight": 0.4
+    }
+]
